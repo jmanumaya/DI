@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
 
 export default function Index() {
   return (
@@ -9,7 +9,12 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Hola Mundo!</Text>
+      <Text>Hola Mundo! Soy Jose Manuel</Text>
+      <Button title="Pulsame" onPress={pulsar}/>
     </View>
   );
+}
+
+function pulsar(){
+  alert("Boton presionado")
 }
