@@ -7,9 +7,29 @@ const Index = () => {
 
 
   const [count, setCount] = useState(0);
-   const handlePress = () => {
-    setCount(count + 1);
+    const handlePress = () => {
+    clicksPress()
+    setCount(prevCount => {
+      const newCount = prevCount + 1;
+      return newCount;
+    });
   };
+  const handlePress2 = () =>{
+    clicksPress()
+    setCount(count - 1);
+  }
+
+  const [clicks, setClicks] = useState(0);
+  const clicksPress = () => {
+    setClicks(prevClick => {
+      const newClick = prevClick + 1;
+      if (newClick %10 ==0 && newClick !== 0){
+        alert("Enhorabuena, llevas " + newClick + " clicks");
+      }
+      return newClick
+    })
+  }
+
   return (
    <View style={styles.container}>
       <Text style={styles.title}>
@@ -17,6 +37,10 @@ const Index = () => {
       </Text>
       <Pressable onPress={handlePress} style={styles.button}>
         <Text style={styles.buttonText}>Incrementar</Text>
+        <Ionicons name="add-circle" size={24} color="white" />
+      </Pressable>
+      <Pressable onPress={handlePress2} style={styles.button}>
+        <Text style={styles.buttonText}>Decrementar</Text>
         <Ionicons name="add-circle" size={24} color="white" />
       </Pressable>
      
@@ -43,6 +67,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#6200ee',
     padding: 15,
     borderRadius: 8,
+    margin: 5,
   },
   buttonText: {
     color: 'white',
