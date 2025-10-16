@@ -23,6 +23,11 @@ export default function App() {
   );
 }
 
+//#region styles
+/**
+ * @constant styles
+ * @description Colección de estilos definidos con StyleSheet.create para el componente.
+ */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -49,3 +54,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+//#endregion
