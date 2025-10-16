@@ -1,6 +1,15 @@
 import { Persona } from '../entities/PersonaModel';
 
+/**
+ * @class RepositoryPersona
+ * @description Repositorio estático para gestionar los datos de Persona.
+ * Simula una fuente de datos (DB, API, etc.).
+ */
 export class RepositoryPersona {
+    /**
+     * @property {Persona[]} personas
+     * @description Lista estática de objetos Persona.
+     */
     private static readonly personas: Persona[] = [
         new Persona(1, 'Lucía', 'García'),
         new Persona(2, 'Mateo', 'Rodríguez'),
@@ -22,6 +31,11 @@ export class RepositoryPersona {
         new Persona(18, 'David', 'Torres'),
     ];
 
+    /**
+     * @method getAll
+     * @description Devuelve la lista completa de personas.
+     * @returns {Persona[]} La lista de todas las personas.
+     */
     public static getAll(): Persona[] {
         return this.personas;
     }
