@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5F5F5",
     paddingHorizontal: 16,
     paddingTop: 30,
+
   },
   titulo: {
     fontSize: 22,
