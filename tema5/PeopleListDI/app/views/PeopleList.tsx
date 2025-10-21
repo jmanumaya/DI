@@ -6,79 +6,91 @@ import { TYPES } from "../core/types";
 import { Persona } from "../models/entities/Persona";
 import { PeopleListVM } from "../viewmodels/PeopleListVM";
 
-
 export default function PeopleList() {
- 
- 
-const viewModel = container.get<PeopleListVM>(TYPES.IndexVM)
+  const viewModel = container.get<PeopleListVM>(TYPES.IndexVM);
 
-
-const renderItem = ({ item }: { item: Persona }) => (
-   
+  const renderItem = ({ item }: { item: Persona }) => (
+    <View style={styles.item}>
       <Text style={styles.itemText}>{item.nombre} {item.apellido}</Text>
-   
+    </View>
   );
 
-    return (
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.titulo}>Listado de Personas</Text>
-       
-        <FlatList
-          data={viewModel.personasList}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-          ItemSeparatorComponent={() => <View style={styles.separator} />}
-          ListEmptyComponent={() => (
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.titulo}>👥 Listado de Personas</Text>
+
+      <FlatList
+        data={viewModel.personasList}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
+        ListEmptyComponent={() => (
+          <View style={styles.emptyContainer}>
             <Text style={styles.textoVacio}>No hay personas registradas</Text>
-    )}
-        />
-      </SafeAreaView>
-    );
-  }
+          </View>
+        )}
+        contentContainerStyle={
+          viewModel.personasList.length === 0 ? styles.centeredList : undefined
+        }
+      />
+    </SafeAreaView>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5F5F5",
-    paddingHorizontal: 16,
-    paddingTop: 30,
-
+    backgroundColor: "#EAF2F8",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 20,
+    paddingTop: 40,
   },
   titulo: {
-    fontSize: 22,
+    fontSize: 26,
     fontWeight: "bold",
-    marginBottom: 16,
+    color: "#1A5276",
+    marginBottom: 25,
     textAlign: "center",
+    letterSpacing: 0.7,
   },
   item: {
     backgroundColor: "#FFFFFF",
-    padding: 16,
-    borderRadius: 10,
+    paddingVertical: 20,
+    paddingHorizontal: 40,
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
     shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  itemPresionado: {
-    backgroundColor: "#D0E8FF",
+    shadowOpacity: 0.15,
+    shadowOffset: { width: 0, height: 3 },
+    shadowRadius: 6,
+    elevation: 3,
+    width: "90%",
+    alignSelf: "center",
   },
   itemText: {
-    fontSize: 16,
+    fontSize: 18,
+    color: "#2C3E50",
+    textAlign: "center",
   },
   separator: {
-    height: 10,
+    height: 16,
   },
-  input: {
-    width:"80%",
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-      },
   textoVacio: {
+    fontSize: 18,
+    color: "#7F8C8D",
     textAlign: "center",
-    marginTop: 20,
-    fontSize: 16,
-    color: "#888",
+    fontStyle: "italic",
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingVertical: 60,
+  },
+  centeredList: {
+    flexGrow: 1,
+    justifyContent: "center",
   },
 });
