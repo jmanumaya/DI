@@ -8,7 +8,7 @@ import { PersonListViewModel } from "../viewmodels/PersonListViewModel";
 export default function PersonListView() {
   const vm = container.get<PersonListViewModel>(TYPES.PersonListViewModel);
 
-  // Lista de personas obtenida desde el ViewModel, solo una vez
+  // Lista de personas obtenida desde el ViewModel
   const [personasList] = useState<Person[]>(() => vm.loadPeople());
 
   // Render de cada persona
@@ -40,6 +40,7 @@ export default function PersonListView() {
   );
 }
 
+//#region StylesSheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -97,3 +98,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+//#endregion

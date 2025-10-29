@@ -19,5 +19,7 @@ export class PersonRepository implements IPersonRepository {
     const index = this._people.findIndex(p => p.idPersona === person.idPersona);
     if (index !== -1) this._people[index] = person;
   }
-  delete(idPersona: number): void { this._people = this._people.filter(p => p.idPersona !== idPersona); }
+  delete(idPersona: number): void {
+     this._people = this._people.filter(p => p.idPersona !== idPersona); 
+  }
 }
