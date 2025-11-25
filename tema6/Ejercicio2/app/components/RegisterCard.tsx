@@ -11,10 +11,10 @@ export default function RegisterCard({ children }: Props) {
       style={{
         backgroundColor: "white",
         padding: 25,
-        borderRadius: 20,
-        width: "90%",
-        marginTop: 40,
-        elevation: 5
+        borderTopLeftRadius: 40,
+        borderTopRightRadius: 40,
+        width: "100%",
+        elevation: 10,
       }}
     >
       {children}

@@ -10,13 +10,11 @@ export default function RoundedButton({ text, onPress }: Props) {
     <Pressable
       onPress={onPress}
       style={{
-        backgroundColor: "#007bff",
-        paddingVertical: 12,
-        paddingHorizontal: 25,
+        backgroundColor: "#ff8000",
+        paddingVertical: 14,
         borderRadius: 30,
         alignItems: "center",
-        width: "100%",
-        marginTop: 15
+        marginTop: 20,
       }}
     >
       <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>

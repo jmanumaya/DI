@@ -6,7 +6,7 @@ export default function Home() {
       style={{
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <Text style={{ fontSize: 22 }}>Te has logueado correctamente</Text>

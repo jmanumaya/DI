@@ -7,7 +7,7 @@ export default function Register() {
       <Stack.Screen
         options={{
           title: "Nuevo usuario",
-          headerBackVisible: true
+          headerBackVisible: true,
         }}
       />
 
@@ -15,7 +15,7 @@ export default function Register() {
         style={{
           flex: 1,
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <Text style={{ fontSize: 22 }}>Página de registro</Text>
