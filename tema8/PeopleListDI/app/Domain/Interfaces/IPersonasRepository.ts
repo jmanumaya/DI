@@ -3,5 +3,6 @@ import { Persona } from "../Entities/Persona";
 
 
 export interface IPersonasRepository {
-     getListadoCompletoPersonas(): Persona[];
+
+    getListadoCompletoPersonas(): Promise<Persona[]>;
 }
