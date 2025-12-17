@@ -1,7 +1,7 @@
-import { Persona } from "../../Domain/Entities/Persona";
+import { Persona } from "../Domain/Entities/Persona";
 import { inject, injectable } from "inversify"; // Faltaba injectable
-import { TYPES } from "../../Core/types";
-import { IPersonasRepository } from "../../Domain/Interfaces/IPersonasRepository";
+import { TYPES } from "../Core/types";
+import { IPersonasRepository } from "../Domain/Interfaces/IPersonasRepository";
 import { makeAutoObservable, runInAction } from "mobx";
 
 @injectable() // IMPORTANTE: No olvides el decorador aquí

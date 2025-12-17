@@ -2,7 +2,7 @@ import { Container } from "inversify";
 import "reflect-metadata";
 import { PersonasRepository } from "../Data/PersonasRepository";
 import { IPersonasRepository  } from "../Domain/Interfaces/IPersonasRepository";
-import { PeopleListVM } from "../UI/VM/PeopleListVM";
+import { PeopleListVM } from "../VM/PeopleListVM";
 import { TYPES } from "./types";
 
 

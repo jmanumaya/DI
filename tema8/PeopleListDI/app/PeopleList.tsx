@@ -1,13 +1,12 @@
 import React from "react";
 import { FlatList, Pressable, StyleSheet, Text, View, Platform, StatusBar, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { container } from "../../Core/container";
-import { TYPES } from "../../Core/types";
-import { Persona } from "../../Domain/Entities/Persona";
-import { PeopleListVM } from "../VM/PeopleListVM"; 
+import { container } from "../src/Core/container";
+import { TYPES } from "../src/Core/types";
+import { Persona } from "../src/Domain/Entities/Persona";
+import { PeopleListVM } from "../src/VM/PeopleListVM"; 
 import { observer } from "mobx-react-lite";
 
-// Inyección del ViewModel
 const viewModel = container.get<PeopleListVM>(TYPES.IndexVM);
 
 // --- PALETA FUTURISTA ---

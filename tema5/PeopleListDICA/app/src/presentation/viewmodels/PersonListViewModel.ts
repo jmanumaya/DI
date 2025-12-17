@@ -26,5 +26,5 @@ export class PersonListViewModel {
   getPeopleNames(): string[] {
     return this.loadPeople().map(p => p.fullName);
   }
-  //#endregion
+  //#endregion  
 }
