@@ -53,7 +53,7 @@ export default function Index() {
             
             {/* Texto Abajo y Centrado */}
             <Text style={styles.pokemonName}>{item.name}</Text>
-            <Text style={styles.pokemonId}>#{index + 1}</Text>
+            <Text style={styles.pokemonId}>#{item.id}</Text>
             
           </View>
         )}
