@@ -33,7 +33,7 @@ export default function Index() {
         keyExtractor={(item, index) => item.name + index}
         
         // --- AQUÍ ESTÁ EL TRUCO PARA QUE SEAN VARIAS POR LÍNEA ---
-        numColumns={2} 
+        numColumns={4} 
         // Estilo para separar las columnas horizontalmente
         columnWrapperStyle={styles.rowSpacing}
         
