@@ -1,5 +1,3 @@
-// src/domain/usecases/SavePersonUseCase.ts
-
 import { injectable, inject } from "inversify";
 import { ISavePersonUseCase } from "../interfaces/usecases/ISavePersonUseCase";
 import { IPersonRepository } from "../interfaces/repositories/IPersonRepository";
