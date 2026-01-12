@@ -19,7 +19,7 @@ export const usePokemonViewModel = () => {
         try {
             const newPokemons = await pokemonUseCase.execute(20, offset);
 
-            setPokemonList((prevList) => [...prevList, ...newPokemons]);
+            setPokemonList(newPokemons);
             setOffset((prevOffset) => prevOffset + 20);
             
         } catch (error) {
