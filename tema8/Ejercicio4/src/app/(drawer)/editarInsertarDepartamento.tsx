@@ -1,18 +1,18 @@
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ActivityIndicator,
-  StyleSheet,
-  ScrollView,
-  Alert,
+    ActivityIndicator,
+    Alert,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
 } from "react-native";
-import { observer } from "mobx-react-lite";
-import { useLocalSearchParams, useRouter } from "expo-router";
-import { useDepartmentEditViewModel } from "../../vm/hooks/useDepartmentEditViewModel";
 import { Department } from "../../domain/entities/Department";
+import { useDepartmentEditViewModel } from "../../vm/hooks/useDepartmentEditViewModel";
 
 const EditarInsertarDepartamento = observer(() => {
   const viewModel = useDepartmentEditViewModel();

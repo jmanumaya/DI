@@ -6,5 +6,14 @@ module.exports = defineConfig([
   expoConfig,
   {
     ignores: ['dist/*'],
+    settings: {
+      'import/resolver': {
+        typescript: {},
+      },
+    },
+    rules: {
+      'import/no-unresolved': 'off',
+      'react-hooks/exhaustive-deps': 'off',
+    },
   },
 ]);

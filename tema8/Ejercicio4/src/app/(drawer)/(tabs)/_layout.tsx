@@ -4,9 +4,16 @@ export default function TabsLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name="index"
+        name="personas"
         options={{
-          title: "Listado de Personas",
+          title: "Gestión de Personas",
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="departamentos"
+        options={{
+          title: "Gestión de Departamentos",
           headerShown: true,
         }}
       />

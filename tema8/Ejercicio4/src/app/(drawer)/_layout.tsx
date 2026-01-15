@@ -1,7 +1,5 @@
-// src/app/(drawer)/_layout.tsx
-
-import { Drawer } from "expo-router/drawer";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { Drawer } from "expo-router/drawer";
 
 export default function DrawerLayout() {
   return (
@@ -10,36 +8,36 @@ export default function DrawerLayout() {
         name="(tabs)"
         options={{
           drawerLabel: "Personas",
-          title: "Personas",
-          headerShown: false,
-          drawerIcon: ({ color, size }: { color: string; size: number }) => (
-            <Ionicons name="people-outline" size={size} color={color} />
+          title: "Gestión de Personas",
+          headerShown: true,
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="person" size={size} color={color} />
           ),
         }}
       />
       <Drawer.Screen
-        name="departamentos"
+        name="(tabs)/departamentos"
         options={{
           drawerLabel: "Departamentos",
-          title: "Listado de Departamentos",
+          title: "Gestión de Departamentos",
           headerShown: true,
-          drawerIcon: ({ color, size }: { color: string; size: number }) => (
-            <Ionicons name="business-outline" size={size} color={color} />
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="briefcase" size={size} color={color} />
           ),
         }}
       />
       <Drawer.Screen
-        name="editarInsertarPersonas"
+        name="editarPersona"
         options={{
-          drawerItemStyle: { display: "none" }, // Ocultar del drawer
+          drawerItemStyle: { display: "none" },
           title: "Editar Persona",
           headerShown: true,
         }}
       />
       <Drawer.Screen
-        name="editarInsertarDepartamento"
+        name="editarDepartamento"
         options={{
-          drawerItemStyle: { display: "none" }, // Ocultar del drawer
+          drawerItemStyle: { display: "none" },
           title: "Editar Departamento",
           headerShown: true,
         }}

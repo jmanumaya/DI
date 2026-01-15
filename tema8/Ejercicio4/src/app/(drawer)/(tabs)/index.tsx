@@ -1,18 +1,18 @@
+import { useRouter } from "expo-router";
+import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  ActivityIndicator,
-  StyleSheet,
-  Alert,
-  TextInput,
+    ActivityIndicator,
+    Alert,
+    FlatList,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
 } from "react-native";
-import { observer } from "mobx-react-lite";
-import { useRouter } from "expo-router";
-import { usePersonListViewModel } from "../../../vm/hooks/usePersonListViewModel";
 import { Person } from "../../../domain/entities/Person";
+import { usePersonListViewModel } from "../../../vm/hooks/usePersonListViewModel";
 
 const ListadoPersonas = observer(() => {
   const viewModel = usePersonListViewModel();
@@ -34,7 +34,7 @@ const ListadoPersonas = observer(() => {
           onPress: async () => {
             try {
               await viewModel.deletePerson(id);
-            } catch (error) {
+            } catch {
               Alert.alert("Error", viewModel.error || "No se pudo eliminar");
             }
           },

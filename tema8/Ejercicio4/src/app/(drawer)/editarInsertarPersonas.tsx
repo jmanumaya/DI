@@ -1,18 +1,18 @@
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ActivityIndicator,
-  StyleSheet,
-  ScrollView,
-  Alert,
+    ActivityIndicator,
+    Alert,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
 } from "react-native";
-import { observer } from "mobx-react-lite";
-import { useLocalSearchParams, useRouter } from "expo-router";
-import { usePersonEditViewModel } from "../../vm/hooks/usePersonEditViewModel";
 import { Person } from "../../domain/entities/Person";
+import { usePersonEditViewModel } from "../../vm/hooks/usePersonEditViewModel";
 
 const EditarInsertarPersonas = observer(() => {
   const viewModel = usePersonEditViewModel();

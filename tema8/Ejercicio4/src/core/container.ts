@@ -1,28 +1,26 @@
-// src/core/container/di.ts
-
 import { Container } from "inversify";
 import { TYPES } from "./types";
 
 // Repositories
-import { IPersonRepository } from "../domain/interfaces/repositories/IPersonRepository";
-import { IDepartmentRepository } from "../domain/interfaces/repositories/IDepartmentRepository";
-import { PersonRepository } from "../data/repositories/PersonRepository";
 import { DepartmentRepository } from "../data/repositories/DepartmentRepository";
+import { PersonRepository } from "../data/repositories/PersonRepository";
+import { IDepartmentRepository } from "../domain/interfaces/repositories/IDepartmentRepository";
+import { IPersonRepository } from "../domain/interfaces/repositories/IPersonRepository";
 
 // Use Cases - Person
-import { IGetPeopleUseCase } from "../domain/interfaces/usecases/IGetPeopleUseCase";
 import { IDeletePersonUseCase } from "../domain/interfaces/usecases/IDeletePersonUseCase";
+import { IGetPeopleUseCase } from "../domain/interfaces/usecases/IGetPeopleUseCase";
 import { ISavePersonUseCase } from "../domain/interfaces/usecases/ISavePersonUseCase";
-import { GetPeopleUseCase } from "../domain/usecases/GetPeopleUseCase";
 import { DeletePersonUseCase } from "../domain/usecases/DeletePersonUseCase";
+import { GetPeopleUseCase } from "../domain/usecases/GetPeopleUseCase";
 import { SavePersonUseCase } from "../domain/usecases/SavePersonUseCase";
 
 // Use Cases - Department
-import { IGetDepartmentsUseCase } from "../domain/interfaces/usecases/IGetDepartmentsUseCase";
 import { IDeleteDepartmentUseCase } from "../domain/interfaces/usecases/IDeleteDepartmentUseCase";
+import { IGetDepartmentsUseCase } from "../domain/interfaces/usecases/IGetDepartmentsUseCase";
 import { ISaveDepartmentUseCase } from "../domain/interfaces/usecases/ISaveDepartmentUseCase";
-import { GetDepartmentsUseCase } from "../domain/usecases/GetDepartmentsUseCase";
 import { DeleteDepartmentUseCase } from "../domain/usecases/DeleteDepartmentUseCase";
+import { GetDepartmentsUseCase } from "../domain/usecases/GetDepartmentsUseCase";
 import { SaveDepartmentUseCase } from "../domain/usecases/SaveDepartmentUseCase";
 
 const container = new Container();
